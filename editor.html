@@ -1,0 +1,60 @@
+<html style="background-color: #0a0f14">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Mixmax &middot; Chart</title>
+
+  <!-- Mixmax SDK -->
+  <script defer src="https://d1xa36cy0xt122.cloudfront.net/v1/Mixmax.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.38.0/handsontable.min.css" type='text/css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.38.0/handsontable.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+</head>
+
+<body data-current-theme="gmail">
+  <div class="app-popup  app-chart container">
+    <h1 class="text-center">Insert Chart</h1>
+    <canvas id="myChart" width="200" height="200"></canvas>
+    <div class="form-group row">
+        <label for="example-search-input" class="col-2 col-form-label">Label</label>
+        <div class="col-6">
+          <input class="form-control" type="search" value="# of Votes" id="label">
+        </div>
+      </div>
+    <div class="form-group row">
+      <label for="example-search-input" class="col-2 col-form-label">Chart type</label>
+      <div class="col-6">
+      <div class="form-check form-check-inline">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="bar" checked="checked"> Bar
+          </label>
+        </div>
+      <div class="form-check form-check-inline">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="line"> Line
+        </label>
+      </div>
+      <div class="form-check form-check-inline disabled">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="doughnut"> Doughnut & Pie
+        </label>
+      </div>
+    </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-search-input" class="col-2 col-form-label">Data Set</label>
+      <div class="col-10">
+        <div id="hot"></div>
+      </div>
+    </div>
+    <button id="save">Insert CHart</button>
+    <button id="cancel">Cancel</button>
+  </div>
+  <script src="./chart.js"></script>
+</body>
+</html>
